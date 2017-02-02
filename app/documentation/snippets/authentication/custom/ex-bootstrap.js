@@ -1,0 +1,1 @@
+directory.setLoginManager( 'my-login-module' );
