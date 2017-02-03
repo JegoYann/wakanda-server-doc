@@ -1,0 +1,57 @@
+<h1>Node Worker</h1>
+
+
+<h2>Why</h2>
+<p>
+    <ul>
+        <li>You need to execute some code in background.</li>
+        <li>You need to do it in a non blocking way.</li>
+        <li>You need to use node modules.</li>
+    </ul>
+</p>
+
+
+<h2>What is it</h2>
+<p>
+    <ul>
+        <li>A node worker is running in its own thread.</li>
+        <li>A node worker runs asynchronously.</li>
+        <li>A node worker provides a interface for messaging.</li>
+        <li>A node worker runs Node 6.9 LTS.</li>
+    </ul>
+</p>
+
+
+<h2>How to</h2>
+<p>
+    The folder <code>PROJECT/backend</code> inside your Wakanda project is where you usually use a node worker.
+</p>
+<p>
+    It is composed of:
+    <ul>
+        <li>A worker running in its own thread.</li>
+        <li>A proxy that helps you to communicate with the worker.</li>
+    </ul>
+    Here is a code example:
+</p>
+<snippets path="documentation/snippets/threads/node-worker/" files="['ex-proxy.js', 'ex-worker.js']"></snippets>
+
+<p>
+    You can require :
+    <ul>
+        <li>
+            Wakanda modules (defined in <code>PROJECT/backend/modules</code>)
+        </li>
+        <li>
+            Node modules (defined in <code>PROJECT/node_modules</code>)
+        </li>
+    </ul>
+    <snippets path="documentation/snippets/threads/node-worker/" files="['ex-require.js', 'ex-requireNode.js']"></snippets>
+</p>
+
+<div class="bs-callout bs-callout-info">
+    For a more advanced example you can visit <a target="_blank" href="https://github.com/JegoYann/wakex-node-worker">this Github repository</a>.
+</div>
+
+
+<doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>

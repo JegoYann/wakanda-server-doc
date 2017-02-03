@@ -1,0 +1,32 @@
+<h1>System Worker</h1>
+
+
+<h2>Why</h2>
+<p>
+    <ul>
+        <li>You need to execute an external application.</li>
+        <li>You need to retrieve the result of an external application.</li>
+        <li>You need to do it in a blocking or non blocking way.</li>
+    </ul>
+</p>
+
+
+<h2>What is it</h2>
+<p>
+    <ul>
+        <li>A system worker is running in its own thread.</li>
+        <li>A system worker runs external system application.</li>
+        <li>A system worker runs synchronously or asynchronously.</li>
+    </ul>
+</p>
+
+
+<h2>How to</h2>
+<p>
+    The folder <code>PROJECT/backend</code> inside your Wakanda project is where you usually use a system worker.
+    Here is a code example on how you can use one:
+</p>
+<snippets path="documentation/snippets/threads/system-worker/" files="['ex-synchronous.js', 'ex-asynchronous.js']"></snippets>
+
+
+<doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>

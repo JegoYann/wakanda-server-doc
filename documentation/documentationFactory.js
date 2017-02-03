@@ -132,6 +132,31 @@ angular.module('wakanda-server-doc')
           page: 'http'
         },
         {
+          name: 'Threads',
+          url: '#/doc/threads',
+          page: 'threads',
+          children: [
+            {
+              name: 'System Worker',
+              url: '#/doc/threads/system-worker',
+              parentPage: 'threads',
+              page: 'system-worker'
+            },
+            {
+              name: 'Shared Worker',
+              url: '#/doc/threads/shared-worker',
+              parentPage: 'threads',
+              page: 'shared-worker'
+            },
+            {
+              name: 'Node Worker',
+              url: '#/doc/threads/node-worker',
+              parentPage: 'threads',
+              page: 'node-worker'
+            }
+          ]
+        },
+        {
           name: 'Miscellaneous',
           url: '#/doc/miscellaneous',
           page: 'miscellaneous'

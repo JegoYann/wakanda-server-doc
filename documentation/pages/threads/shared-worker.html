@@ -1,0 +1,48 @@
+<h1>Shared Worker</h1>
+
+
+<h2>Why</h2>
+<p>
+    <ul>
+        <li>You need to execute some code in background.</li>
+        <li>You need to do it in a non blocking way.</li>
+    </ul>
+</p>
+
+
+<h2>What is it</h2>
+<p>
+    <ul>
+        <li>A shared worker is running in its own thread.</li>
+        <li>A shared worker runs asynchronously.</li>
+        <li>A shared worker provides an interface for messaging.</li>
+        <li>A shared worker runs V8 4.2.</li>
+    </ul>
+</p>
+
+
+<h2>How to</h2>
+<p>
+    The folder <code>PROJECT/backend</code> inside your Wakanda project is where you usually use a shared worker.
+</p>
+<p>
+    It is composed of:
+    <ul>
+        <li>A worker running in its own thread.</li>
+        <li>A proxy that helps you to communicate with the worker.</li>
+    </ul>
+    Here is a code example:
+</p>
+<snippets path="documentation/snippets/threads/shared-worker/" files="['ex-proxy.js', 'ex-worker.js']"></snippets>
+
+<p>
+    You can require :
+    <ul>
+        <li>
+            Wakanda modules (defined in <code>PROJECT/backend/modules</code>)
+        </li>
+    </ul>
+    <snippets path="documentation/snippets/threads/shared-worker/" files="['ex-require.js']"></snippets>
+</p>
+
+<doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>
