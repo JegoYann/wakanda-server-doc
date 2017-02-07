@@ -135,4 +135,30 @@
         </li>
     </ul> 
 </p>
+
+
+<h2>Monitoring</h2>
+
+<ul>
+    <li>HTTP connections
+        </br>
+        <code>http://{servername}:{port}/rest/$info/HTTPConnections</code>
+        </br>
+        The request result is an array of HTTP connections informations per client.
+        <pre><code>
+        {
+            HTTPConnections: [ {
+                clientIP: "::ffff:127.0.0.1",
+                receivedConnection: 6, // total number of received connections
+                handledConnection: 6, // total number of handled connections
+                pendingConnection: 0, // current number of pending connections
+                maxPendingConnection: 6, // max number of pending connections
+                queuedConnection: 0, // current number of queued connections
+                maxQueuedConnection: 0 // max number of queued connections
+            } ]
+        }
+        </code></pre>
+    </li>
+</ul>
+
 <doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>

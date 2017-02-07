@@ -38,3 +38,28 @@ You can configure your HTTP server's settings by openning your project settings 
 </p>
 
 <snippets path="documentation/snippets/misc/" files="['cors.xml']"></snippets>
+
+<h2>HTTP connection limitations</h2>
+
+
+<code>
+<settings>
+	<http   maxConnectionCountPerClient="50" 
+            maxQueuedConnectionCount="512"
+            maxQueuedConnectionCountPerClient="50"/>
+</settings>
+</code>
+
+<ul>
+    <li>
+        <code>maxConnectionCountPerClient</code>: limits the number of connections which are handled simultaneously for a client, Once the client reaches the limit, other connections are pushed in the queue.
+    </li>
+    <li>
+        <code>maxQueuedConnectionCount</code>:limit the size of the connections queue. Once the queue is full, the server responds with the error 503. <code>maxQueuedRequestCount</code> is global for all clients.
+    </li>
+    <li>
+        <code>maxQueuedConnectionCountPerClient</code> limit the number of queued connections per client this time.
+    </li>
+</ul>
+
+<doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>
