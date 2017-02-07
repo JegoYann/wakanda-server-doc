@@ -35,15 +35,17 @@
     Wakanda server provides some command line parameters.
 </p>
 <p>
-    Linux: 
+    Linux:
+    </br>           
     <code>
         $ ./wakanda-server [path/to/myApplication.waSolution] [--option=value] [-option]...
     </code>
 </p>
 <p>
     Windows: 
+    </br>           
     <code>
-        > ./wakanda-server.exe [path/to/myApplication.waSolution] [--option=value] [-option]...
+    > ./wakanda-server.exe [path/to/myApplication.waSolution] [--option=value] [-option]...
     </code>
 </p>
 <ul>
@@ -68,4 +70,69 @@
     You can learn more about the subject by visiting the <a href="http://doc.wakanda.org/home2.en.html#/Command-Line-Access/Administrating-Wakanda-Server-Unix.300-583228.en.html">doc-center</a>.
 </div>
 
+<h2>Service</h2>
+
+<p>
+    Wakanda server can be run as a service.
+</p>
+<p>
+    <h3>Linux</h3>
+    <ul>
+        <li>
+            Start Wakanda service:
+            </br>           
+            <code>$ sudo service wakanda start</code>
+        </li>
+        <li>
+            Stop Wakanda service:
+            </br>           
+            <code>$ sudo service wakanda stop</code>
+        </li>
+        <li>
+            Get Wakanda service status:
+            </br>           
+            <code>$ sudo service wakanda status</code>
+        </li>
+    </ul>
+    </p>
+    <p>
+    The <code>/etc/default/wakanda</code> file allows you to configure the service:
+    <ul>
+        <li>
+            <code>wakanda_opt_solution</code>: Full pathname of the Wakanda solution to launch when the service starts
+        </li>
+        <li>
+            <code>wakanda_opt_with_syslog</code>: Flag for routing the solution log via syslog. "1" for enabling syslog (recommended), "0" for disabling it
+        </li>
+        <li>
+            <code>wakanda_run_as_user</code>: The UNIX user that Wakanda Server will be running as. The Wakanda Solution must be accessible from this user (read/write). If the logs are routed via syslog, the user must have write-access to the "/var/log/wakanda" folder (Note: Wakanda Server must not be running as "root").
+        </li>
+        <li>
+            <code>wakanda_opt_pid</code>: PID file containing Wakanda Server's process id
+        </li>
+    </ul>
+</p>
+
+<p>
+    <h3>Windows</h3>
+    <ul>
+        <li>
+            Create Wakanda service:
+            </br>           
+            <code>> sc create WakandaServer binPath= "path/to/wakanda-server.exe"</code>
+            </br>           
+            <code>> sc create WakandaServer binPath= "path/to/wakanda-server.exe path/to/myApplication.waSolution"</code>
+        </li>
+        <li>
+            Start Wakanda service:
+            </br>           
+            <code>> sc start WakandaServer</code>
+        </li>
+        <li>
+            Stop Wakanda service:
+            </br>           
+            <code>> sc stop WakandaServer</code>
+        </li>
+    </ul> 
+</p>
 <doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>
