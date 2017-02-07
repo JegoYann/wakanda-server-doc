@@ -156,6 +156,11 @@ angular.module('wakanda-server-doc')
             }
           ]
         },
+         {
+          name: 'Administration',
+          url: '#/doc/administration',
+          page: 'administration'
+        },
         {
           name: 'Miscellaneous',
           url: '#/doc/miscellaneous',

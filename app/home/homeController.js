@@ -32,6 +32,12 @@ angular.module('wakanda-server-doc')
         description: '',
         imageUrl: './images/http.png',
         link: '#/doc/threads'
+      },
+      {
+        name: 'ADMINISTRATION',
+        description: '',
+        imageUrl: './images/http.png',
+        link: '#/doc/administration'
       }
     ];
     $scope.sections = sections;
