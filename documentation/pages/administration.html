@@ -1,0 +1,71 @@
+<h1>Administration</h1>
+
+<h2>Interface</h2>
+
+<div class="bs-callout bs-callout-danger">
+    This is an enterprise version feature only.
+</div>
+
+<p>
+    Wakanda provides an administration interface for the Wakanda server.
+</p>
+<ul>
+    <li>
+        It shows the running application and its projects 
+    </li>
+    <li>
+        It provides a backup actions: run, verify and restore
+    </li>
+    <li>
+        It helps to manage tasks (CRON jobs): create, update, schedule and remove
+    </li>
+    <li>
+        It shows task (CRON jobs) results on a calendar
+    </li>
+</ul> 
+
+<div class="bs-callout bs-callout-info">
+    By default, this administration interface is available on http://127.0.0.1:8080/admin
+</div>
+
+
+<h2>Command line</h2>
+
+<p>
+    Wakanda server provides some command line parameters.
+</p>
+<p>
+    Linux: 
+    <code>
+        $ ./wakanda-server [path/to/myApplication.waSolution] [--option=value] [-option]...
+    </code>
+</p>
+<p>
+    Windows: 
+    <code>
+        > ./wakanda-server.exe [path/to/myApplication.waSolution] [--option=value] [-option]...
+    </code>
+</p>
+<ul>
+    <li>
+        <code>-h, --help</code>: Display the help
+    </li>
+    <li>
+        <code>--version</code>: Display the version
+    </li>
+    <li>
+        <code>--syslog</code>: Forward Wakanda Server's log messages to the Syslog daemon (see below)
+    </li>
+    <li>
+        <code>--admin-port=[number]</code>: Set the HTTP port number of administration interface.
+    </li>
+    <li>
+        <code>--admin-ssl-port=[number]</code>: Set the HTTPS port number of administration interface.
+    </li>
+</ul> 
+
+<div class="bs-callout bs-callout-info">
+    You can learn more about the subject by visiting the <a href="http://doc.wakanda.org/home2.en.html#/Command-Line-Access/Administrating-Wakanda-Server-Unix.300-583228.en.html">doc-center</a>.
+</div>
+
+<doc-pagination page="{{currentPage}}" subpage="{{currentSubPage}}"></doc-pagination>
