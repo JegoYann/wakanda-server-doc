@@ -16,7 +16,7 @@
     <ul>
         <li>A node worker is running in its own thread.</li>
         <li>A node worker runs asynchronously.</li>
-        <li>A node worker provides a interface for messaging.</li>
+        <li>A node worker provides an interface for messaging.</li>
         <li>A node worker runs Node 6.9 LTS.</li>
     </ul>
 </p>
@@ -24,30 +24,36 @@
 
 <h2>How to</h2>
 <p>
-    The folder <code>PROJECT/backend</code> inside your Wakanda project is where you usually use a node worker.
-</p>
-<p>
-    It is composed of:
-    <ul>
-        <li>A worker running in its own thread.</li>
-        <li>A proxy that helps you to communicate with the worker.</li>
-    </ul>
-    Here is a code example:
-</p>
-<snippets path="documentation/snippets/threads/node-worker/" files="['ex-proxy.js', 'ex-worker.js']"></snippets>
-
-<p>
-    You can require :
+    You can require a:
     <ul>
         <li>
-            Wakanda modules (defined in <code>PROJECT/backend/modules</code>)
+            Wakanda modules (defined in <code>PROJECT/modules</code>)
         </li>
         <li>
-            Node modules (defined in <code>PROJECT/node_modules</code>)
+            Node modules (defined in <code>PROJECT/node_modules</code>). 
         </li>
     </ul>
     <snippets path="documentation/snippets/threads/node-worker/" files="['ex-require.js', 'ex-requireNode.js']"></snippets>
 </p>
+
+<p>
+    You can install a node module:
+    <ul>
+        <li>
+            Right click on your <code>BACKEND-PROJECT</code> in the tree
+        </li>
+        <li>
+            Click on <code>open in terminal</code>
+        </li>
+        <li>
+            Type: <code>$ npm install NodeModuleToInstall</code>
+        </li>
+    </ul>
+</p>
+
+    Here is a code example:
+</p>
+<snippets path="documentation/snippets/threads/node-worker/" files="['ex-proxy.js', 'ex-worker.js']"></snippets>
 
 <div class="bs-callout bs-callout-info">
     For a more advanced example you can visit <a target="_blank" href="https://github.com/JegoYann/wakex-node-worker">this Github repository</a>.

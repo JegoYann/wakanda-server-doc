@@ -1,3 +1,7 @@
+// Requires a node module from /node_modules/ directory
+// In terminal, type "backend-project/ $ npm install node-random-name"
+var random_name = requireNode('node-random-name');
+
 // onconnect is called everytime a new worker proxy is created
 onconnect = function( msg )
 {
@@ -20,8 +24,10 @@ onconnect = function( msg )
             // It's a hello world message
             case 'hello':
                 console.log( '[RECEIVED BY WORKER] '+ event.says );
+                // Use node module to get a cool worker name !
+                var name = random_name();
                 // Reply to the worker proxy
-                workerPort.postMessage( {type: 'hello', says: 'Hello proxy!'} );
+                workerPort.postMessage( {type: 'hello', says: 'Hello proxy! I am '+name+'.' } );
                 break;
 
             // It's a terminate message

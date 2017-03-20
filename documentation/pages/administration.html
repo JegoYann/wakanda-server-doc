@@ -133,17 +133,7 @@
             </br>           
             <code>> sc create WakandaServer binPath= "path/to/wakanda-server.exe"</code>
             </br>           
-            <code>> sc create WakandaServer binPath= "path/to/wakanda-server.exe path/to/myApplication.waSolution"</code>
-        </li>
-        <li>
-            Start Wakanda service:
-            </br>           
-            <code>> sc start WakandaServer</code>
-        </li>
-        <li>
-            Stop Wakanda service:
-            </br>           
-            <code>> sc stop WakandaServer</code>
+            <code>> sc create WakandaServer start= "auto" binPath= "path/to/wakanda-server.exe path/to/myApplication.waSolution"</code>
         </li>
     </ul> 
 </p>
