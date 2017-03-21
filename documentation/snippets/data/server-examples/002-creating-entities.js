@@ -1,6 +1,6 @@
-var strHeroes       = File('/PROJECT/backend/heroes/list.json').toString('utf-8');
+var strHeroes       = File('/PROJECT/heroes/list.json').toString('utf-8');
 var heroes          = JSON.parse(strHeroes);
-var photosFolder    = Folder('/PROJECT/backend/heroes/images/');
+var photosFolder    = Folder('/PROJECT/heroes/images/');
 //Get the company with ID = 1
 var heroAssociation = ds.Company(1);
 

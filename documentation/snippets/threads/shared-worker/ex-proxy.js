@@ -1,5 +1,5 @@
 // Create a new SharedWorker and get the proxy worker
-var myWorkerProxy = new SharedWorker( 'backend/worker.js', 'my-worker-name' );
+var myWorkerProxy = new SharedWorker( 'worker.js', 'my-worker-name' );
 // Get the proxy worker port for communication
 var workerProxyPort = myWorkerProxy.port;
 // Send a "hello" message to the worker
